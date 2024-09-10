@@ -1,0 +1,15 @@
+spring:
+  application:
+    name: scs-publisher
+  cloud:
+    function:
+      definition: consumerBinding;producerBinding
+    stream:
+      bindings:
+        consumerBinding-in-0:
+          destination: scs-publisher
+        producerBinding-in-0:
+          destination: scs-input-channel
+        producerBinding-out-0:
+          destination: scs-publisher
+
